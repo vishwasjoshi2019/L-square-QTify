@@ -7,6 +7,7 @@ import {fetchTopAlbums, fetchNewAlbums, fetchSongs} from './api/api'
 import { useEffect, useState } from 'react';
 import styles from "./App.module.css"
 
+
 function App() {
 
   //state to store top/new Albums, topAlbumSongs is just an array of 16-17 albums with some info and an array of songs in that album
@@ -109,13 +110,7 @@ const generateNewSongs=(index)=>{
 
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <div className={styles.sectionWrapper}>
-      <Section type='album' title='Top Albums' data={topAlbumSongs}/>
-      <Section type='album' title='New Albums' data={newAlbumSongs}/>
-      <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/>
-      </div>
+    <Navbar />
     </div>
   );
 }
